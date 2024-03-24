@@ -2,7 +2,7 @@
 
 ### API that sends requests from the site to the appropriate channel or group via Telegram Bot
 
-### Usafe:
+### Usage:
 
 > [!IMPORTANT]
 > First ask the backend developer to add the project to the database. The following information must be provided:
