@@ -1,6 +1,20 @@
 # Notlify - Telegram notifier service for sending website contact forms to Telegram with ease!
 
-### API that sends requests from the site to the appropriate channel or group via Telegram Bot
+### API that sends requests from the site to the appropriate channel or group via Telegram Bot (without exposing Bot token)
+
+### How to run:
+
+> [!IMPORTANT]
+> You need a server and a MySQL database to run Notlify.
+
+```sh
+git clone git@github.com:zayniddindev/notlify.git
+cd ./notlify
+yarn & yarn build
+cp .env.example .env
+# populate .env with database credentials
+yarn start:prod
+```
 
 ### Usage:
 
@@ -46,13 +60,4 @@ Body :
 
 ### Getting group ID
 
-To do this, enter the group and give the following command:
-
-```sh
-@<botname>/start
-```
-
-Then send a request to the API (to the `/notification` route as shown above). You will find the group ID in the logs in application logs!
-
-> [!NOTE]
-> If you don't find the group ID, do the process from the beginning again!
+If the group is open (public), you enter the username, if it is closed (private), you enter the group ID. To get a private ID, you take the link of any message in the group and get the group ID from inside it, for example, in the link `https://t.me/c/1652046431/184`, `1652046431` is the group ID
